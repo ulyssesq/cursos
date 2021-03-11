@@ -1,24 +1,13 @@
 import React, { Component } from "react";
-import CardNota from "./cardNota";
+import CardNota from "./CardNota/cardNota";
 
 class ListaDeNotas extends Component {
     render() {
-        // const numbers = [1,2,3,4,5];
-        // const listItems = numbers.map((number) => <li>{number}</li>);
-        // console.log(listItems);
-
-        // return (
-        //     <ul>
-        //         {listItems}
-        //     </ul>
-        // )
         return (
             <ul>
-
-                {Array.of("Trabalho", "Trabalho", "Estudo").map((categoria) => {
+                {Array.of("Trabalho", "Trabalho", "Estudo").map((categoria, index) => {
                     return (
-                        <li>
-                            <div>{categoria}</div>
+                        <li key={index}>
                             <CardNota />
                         </li>
                     );
