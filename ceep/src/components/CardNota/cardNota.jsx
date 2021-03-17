@@ -1,13 +1,13 @@
 import React, { Component } from "react";
 import "./estilo.css";
-import {ReactComponent as DeleteSVG} from "../../assets/img/delete.svg";
-
+import {ReactComponent as DeleteSVG} from "../../assets/img/delete.svg"
 class CardNota extends Component {
+
   apagar(){
     const indice = this.props.indice;
     this.props.apagarNota(indice);
   }
-
+  
   render() {
     return (
       <section className="card-nota">
@@ -16,6 +16,7 @@ class CardNota extends Component {
           <DeleteSVG onClick={this.apagar.bind(this)}/>
         </header>
         <p className="card-nota_texto">{this.props.texto}</p>
+
       </section>
     );
   }
